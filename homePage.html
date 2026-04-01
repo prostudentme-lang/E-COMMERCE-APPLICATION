@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Serif", serif;
+        }
+
+        .navContainer {
+            height: 70px;
+            width: 100%;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .navContainer .logoBlock {
+            height: 70px;
+            flex-basis: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logoBlock img {
+            height: 60px;
+            width: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .navContainer .menuBlock {
+            height: 70px;
+            flex-basis: 70%;
+        }
+
+        .menuBlock ul {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+        ul li a:hover {
+            border-bottom: 1px solid aliceblue;
+        }
+
+        .navContainer .cartBlock {
+            height: 70px;
+            flex-basis: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cartBlock img {
+            height: 45px;
+            width: 45px;
+        }
+
+        footer {
+            height: 50px;
+            width: 100%;
+               background: linear-gradient(90deg, #6a11cb, #2575fc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        footer h3 {
+            color: aliceblue;
+        }
+
+
+        .mainSection {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .mainSection .AllProducts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .AllProducts article {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .AllProducts article h1 {
+            color: #fff;
+            font-size: 30px;
+            text-decoration: underline;
+        }
+
+        .product {
+
+            height: 480px;
+            display: inline-block;
+            width: 290px;
+            text-align: center;
+            border: 1px solid #333;
+            border-radius: 100px;
+            padding: 15px;
+            margin: 10px;
+            background-color: #ffff;
+
+        }
+
+        .product img {
+            width: 250px;
+            height: 280px;
+            border-radius: 100px;
+            margin-bottom: 10px;
+            object-fit:cover;
+        }
+
+        .product h3 {
+            font-size: 25px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 20px;
+            color:    #ffb300;
+            margin-bottom: 15px;
+        }
+
+        .product button {
+            background-color: #ffdc00;;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+             border-radius: 100px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #1cc52b;
+            border: 2px solid #333;
+            color: #333;
+        }
+        #cartCount{
+            font-size: 23px;
+            color: rgb(255, 0, 21);
+            position: absolute;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav bar section -->
+    <nav class="navContainer">
+        <aside class="logoBlock">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDd14NnOKPn5m3xPwtEYmvW1anpYvMzVMuHA&s"
+                alt="logoBlock">
+        </aside>
+        <aside class="menuBlock">
+            <ul>
+                <li><a href="#">Mens</a></li>
+                <li><a href="#">Womens</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </aside>
+        <aside class="cartBlock">
+            <a href="./cartPage.html"><img src="https://img.icons8.com/material-outlined/24/ffffff/shopping-cart.png" alt="Cart"></a>
+            <span id="cartCount">0</span>
+        </aside>
+    </nav>
+
+    <!-- Main Container -->
+
+    <main class="mainSection">
+        <aside class="AllProducts">
+            <article class="mensCollection">
+                <h1>Men's Collection</h1>
+                <div class="product">
+                     <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRC37LXjGUMpx1uJtxvizfrdGDSgnK1TVcOqUz9DbuecHawec8qR9NtsuWQul-HhanvJYPtcHI2KWr8gQofZfH3pWvmgFUVq_XJLlRn-pMLPcB0ng8o6N7_" alt="Men Shirt"  >
+                      <h3>Casual Shirt</h3>
+                       <p class="price">$39.00</p>
+                       
+                     <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                  <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRERdon6QwrthPzIliqX8hF5aZaZUjjzLxbbOFXV6Vrus6hCDw03QOvW7kYi2B-G5lDJ8koO9JVbbuQ7UeYwxbthAtKslO3W3ErjeP6VBFJYeSyavPX83xN" alt="Men Jacket" >
+                  <h3>Denim Jacket</h3>
+                  <p class="price">$89.00</p>
+                  <button>Add to Cart</button>
+                  </div>
+                <div class="product">
+                  <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRPn1EVBKVq7HvALetQXousjtz8g67nauKVi3INw3PEoI6CsitdTqHcBVQki6T5kYU15M9fFwJdUvwbXlXHkYj6cmTMExJOGX3qBjr-HmJbKJO9Clt8AreY9w" alt="Oversized Tshirt">
+                  <h3>Oversized Tshirt</h3>
+                  <p class="price">$49.00</p>
+                  <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                      <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRmXZ1UwFEHoUnwHdbE8X6NLJ9dqOcKXitA04SFE_obDNL42qO-gzr-asYUbXsMTliy2JKyZGFTd7IH0opNlRSEek85_H6xCjmMKPLFEHQZb_RyEeOxzFY4lA" alt="Men Jeans">
+                      <h3>Jogger Jeans</h3>
+                      <p class="price">$49.00</p>
+                      <button>Add to Cart</button>
+                 </div>
+            </article>
+
+            <!-- women -->
+
+            <article class="womensCollection">
+                <h1>Women's Collection</h1>
+                <div class="product">
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf6Wc2tLKCxAzJJgpu7YF5RLHCWxXUmGfCGQ&s" alt="Slip Dress">
+                     <h3>slip Dress</h3>
+                     <p class="price">$99.00</p>
+                     <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Hgg_wAawkRyVhektwyEiRvAAqdWgHKf-rQ&s" alt="Empire">
+                    <h3>Empire</h3>
+                    <p class="price">$399.75</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRcw19OElz9N9pmkmStgUkJ0g7jB6fkSfmwA&s" alt="Trench coat ">
+                    <h3>Trench coat </h3>
+                    <p class="price">$279.40</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQUqJEhRBG4mgxyHTB9DjXGeQhfrj79JfLw8Tnf_PCQ76isNMOml30KxSS0fHHavAu4gFknBnTV07IEf4W1ELE-gG4KMeuqsFzBgfoSy2DtbdAWbid5nsTU" alt="Sari">
+                    <h3>sari</h3>
+                    <p class="price">$499.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                </div>
+            </article>
+
+                 <!-- kids -->
+
+            <article class="kidsCollection">
+                <h1>Kid's Collection</h1>
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQYTHTG9PJ6FJZx9lRVMKTwuq2_j7TTknAqUv2kMJl5SrXEnVo3IbUT5O-ndKM7Pk3y7DDOGEdwoMHkC85xtuRblw5NKgN8q-GCnowOPW7IWz7w59-3RhGKhw" alt="Denim rompers">
+        <h3>Denim Rompers</h3>
+        <p class="price">$199.00</p>
+        <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                   <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTyRKrcSfVwwR8KbJ6dB36v4SMCDqaM02CoGFpjLkMVtk70an1uXnwO2Bk0AIAF1gzVDpFrP9E7TTbaTfmW7EC2voOulSVDwpvKhWiYfixkWTDSoZ66QUKy" alt="T-shirts">
+        <h3>T-shirts</h3>
+        <p class="price">$19.00</p>
+        <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                  <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS2oVkrH46l4awfUEq3NsC_PCHJxmKZRDv3jJusVCjClLlbcY26q16ruwhbDoxOWeByXW8otR_HmkrJORsnqdANGYEWqRDiAd8sa3_XD3zkeVhPHCwJyn8bow" alt="Jackets and hoodies">
+        <h3>Jackets and hoodies</h3>
+        <p class="price">$79.00</p>
+        <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                   <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSm58Oo7yYGBzZhac3aXhBD8Gh8J9QwAPj-E965saeE0p0V0DhAxY8Blnsbx1SMNK1MHtBmgoL8yV9fzx6Lci3JFCDUZZzP8pQSLW5JTSoFHT24zauyj8Ff" alt="Snowsuits">
+        <h3>Snowsuits</h3>
+        <p class="price">$179.00</p>
+        <button>Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Accessories -->
+            <article class="accessoriesCollection">
+                <h1>Accessories Collection</h1>
+             
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRBJCjskoXnL2UdHwA5vtqwX2DjlfH8hZCWEMPZnFzXzO4y8yJ2Wr7ZOQH7CHQZZ9ePP6S97N0bGmpuYnSLGx-Te0DTY6iMt2M0ZIB7h9-g_fUtBToyRq8m" alt="Handbags">
+                    <h3>Handbags</h3>
+                    <p class="price">$1,599.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                     <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSVDw3Zyp7OpmlbomJrRkZ8iEqZMBkqbB9W11QCEm3DcJ19aaO3fZOHazWyqT9uzJZ_kqIFoJDrlXfOqN2We0To4rau5H78b8AHoOyihqxV" alt="Jewelry">
+                     <h3>Jewelry</h3>
+                     <p class="price">$19999.00</p>
+                     <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                   <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSzcRkPWdAS7gnGh6_keU3tQ3y5jlqTWdZab3CqrxbCAhv8mVg3y2KXDg6CAGk2DhjSlZW-4srTm3bhrUdgCC2VMGXtwqI7m8QKKSnAdUD9Mzn_Noq_I2SQ" alt="Belts">
+                   <h3>Belts</h3>
+                   <p class="price">$59.00</p>
+                   <button>Add to Cart</button>
+                </div>
+                   <div class="product">
+                   <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSA81y9OYZgj85T1fIqeFMXzn99hWwVJ9WduHygrtUUn_RNWy5d3HkJtnYEKKuwjUPGPmSdwH0b1xt1UpOZyEPBRMpWNHh-MtWZBOUMWcp-je7WwastqSw7mw" alt="Watches">
+                   <h3>Watches</h3>
+                   <p class="price">$1,18,999.00</p>
+                   <button>Add to Cart</button>
+                </div>
+            </article>
+        </aside>
+    </main>
+    <footer>
+        <h3>@copy rights 2025</h3>
+    </footer>
+</body>
+<script src="./homepage.js"></script>
+
+</html>

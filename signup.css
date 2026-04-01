@@ -1,0 +1,123 @@
+/* Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form Container */
+form {
+  background: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 380px;
+}
+
+/* Remove fieldset border */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Legend styling */
+legend {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Table layout */
+table {
+  width: 100%;
+  border-spacing: 0 15px;
+   border-collapse: collapse;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline:none;
+  font-size: 14px;
+  background: #f9f9f9;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #1e90ff;
+  background: #fff;
+}
+
+/* Radio buttons */
+td label {
+  font-size: 14px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+input[type="radio"] {
+  margin-left: 6px;
+  margin-right: 3px;
+}
+
+/* Buttons */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 45%;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #0d6efd, #1e90ff);
+}
+
+button[type="reset"] {
+  background: #efefef;
+  color: #262626;
+}
+
+button[type="reset"]:hover {
+  background: #dbdbdb;
+}
+/* Gender row */
+td label {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Make gender radios evenly spaced */
+td input[type="radio"] {
+  margin-right: 6px;
+}
+
+tr td:has(input[type="radio"]) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+}

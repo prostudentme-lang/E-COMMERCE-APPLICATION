@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        header{
+            height: 50px;
+            width: 100%;
+            background: linear-gradient(to right, #f1f2b5, #135058);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        header a{
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+
+        }
+        header a:hover{
+            border-bottom: 1px solid;
+        }
+    </style>
+    <link rel="stylesheet" href="./cartPage.css">
+
+</head>
+<body>
+    
+    <header>
+        <h1>Your cart items</h1>
+        <a href="./homePage.html">Back to home Page</a>
+    </header>
+
+    <main class="Container">
+        <h1>Cart Items</h1>
+        <section id="cartItemContainer">
+        <article></article>
+
+
+        </section>
+
+        <section class="cartSummary">
+            <h2>Total Price: ₹ <span id="totalPrice">0</span></h2>
+            <button id="clearCart">Clear cart</button>
+            <button id="checkout">Checkout</button>
+        </section>
+
+
+    </main>
+    <img src="" alt="">
+    <h3></h3>
+    <p></p>
+    <button></button>
+</body>
+<script src="./cartPage.js"></script>
+</html>
